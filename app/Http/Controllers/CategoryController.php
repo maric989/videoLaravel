@@ -23,7 +23,7 @@ class CategoryController extends Controller
 
         $this->validate(request(), [
 
-            'genre' => 'required'
+            'genre' => 'required|min:2'
 
         ]);
 
@@ -49,7 +49,7 @@ class CategoryController extends Controller
     {
         $categories = Category::find($id);
 
-        return view('category.show',array('categories' => $categories));
+        return view('category.show',array('category' => $categories));
     }
 
     public function index()

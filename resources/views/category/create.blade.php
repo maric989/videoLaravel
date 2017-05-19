@@ -1,3 +1,8 @@
+@extends('layout')
+
+@section('content')
+
+
 <form method="post" action="/category">
 
     {{ csrf_field() }}
@@ -20,3 +25,5 @@
 </form>
 
 <a href="../category/show/"> Back to category</a>
+
+    @endsection

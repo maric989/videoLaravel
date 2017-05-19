@@ -48,6 +48,7 @@ Route::get('/category/{id}/edit', 'CategoryController@edit');
 
 Route::put('/category/{id}', 'CategoryController@update');
 
+//movies
 
-
+Route::get('/movie/create', 'MovieController@create');
 

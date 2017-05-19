@@ -2,7 +2,6 @@
 <h1> Edit {{$actor->fname}} {{$actor->lname}}{{--Edit {{$actor->fname} {$actor->lname}}--}}</h1>
 
 
-
 <form method="post" action="/actor/{{$actor->id}}">
     {{ method_field('PUT') }}
 

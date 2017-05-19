@@ -45,7 +45,7 @@
                         </form>
                     </td>
                     <td>
-                        <form method="put" action="/category/{{$cat->id}}/edit">
+                        <form method="post" action="/category/{{$cat->id}}/edit">
 
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <button class="btn btn-small btn-info"  type="submit">Edit</button>

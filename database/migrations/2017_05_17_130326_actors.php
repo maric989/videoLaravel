@@ -19,6 +19,7 @@ class Actors extends Migration
             $table->string('lname');
             $table->timestamps();
         });
+
     }
 
     /**
