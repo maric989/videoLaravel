@@ -54,3 +54,9 @@ Route::post('/movie', 'MovieController@store');
 
 Route::get('/movie/index','MovieController@index');
 
+Route::get('/movie/show/{id}', 'MovieController@show');
+
+Route::post('/movie/delete/{id}','MovieController@delete');
+
+
+

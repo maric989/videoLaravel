@@ -32,8 +32,15 @@ class MovieController extends Controller
 
 
     }
+    public function show($id)
 
+    {
+        $movies = Movie::find($id);
+        $info = Movie::with(['category','actors'])->get();
 
+        return view('movie.show', compact('movies','info'));
+
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -81,23 +88,7 @@ class MovieController extends Controller
         return redirect('/movie/create');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
 
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         //
@@ -121,8 +112,10 @@ class MovieController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete($id)
     {
-        //
+        Movie::destroy($id);
+
+        return redirect('/movie/index');
     }
 }

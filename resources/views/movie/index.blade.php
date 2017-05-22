@@ -2,46 +2,39 @@
 
 @section('content')
 
-<a href="create"> Add movie</a> <br>
+<a href="create"><h3> Add movie </h3></a> <br>
 
 
 
 <div>
+        <table class="table table-striped table-bordered">
+            <thead>
+                <th>Name</th>
+                <th>Action</th>
+            </thead>
+            <tbody>
+            @foreach($movies as $movie)
+            <tr>
 
-        @foreach($movies as $movie)
+                <td>
 
-            {{$movie->name}}
+            <a href="/movie/show/{{$movie->id}}"><b>{{$movie->name}}</b></a>
+               </td>
+                <td>
+                    <form action="/movie/delete/{{$movie->id}}" method="POST" onsubmit="return confirm('Are you sure?');">
 
-            <video id="my-video" class="video-js" controls preload="auto" width="300" height="300" data-setup="{}">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        <button type="submit" class="btn btn-danger">Delete</button>
 
-                <source src="http://video2.dev/{{$movie->file_path}}" type='video/mp4'> </video>
-
-            <p> <b>Actors</b></p>
-
-            @foreach($movie->actors as $act)
-                <ul>
-
-                    <li>{{$act->fname}} {{$act->lname}}</li>
-
-                </ul>
-
-            @endforeach
-
-            <p> Category</p>
-
-            @foreach($movie->category as $category)
-
-                    <ul>
-
-                    <li> {{$category->genre}}</li>
-
-                    </ul>
-
-            @endforeach
+                    </form>
+                </td>
+            </tr>
 
 
 
         @endforeach
+            </tbody>
+        </table>
 
 </div>
 
