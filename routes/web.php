@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'MovieController@welcome');
 //Route::get('/','welcome');
 
 //actors
@@ -51,4 +49,8 @@ Route::put('/category/{id}', 'CategoryController@update');
 //movies
 
 Route::get('/movie/create', 'MovieController@create');
+
+Route::post('/movie', 'MovieController@store');
+
+Route::get('/movie/index','MovieController@index');
 
