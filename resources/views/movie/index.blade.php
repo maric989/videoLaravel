@@ -28,6 +28,15 @@
 
                     </form>
                 </td>
+                <td>
+                    <form method="post" action="/movie/{{$movie->id}}/edit">
+
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        <button class="btn btn-small btn-info"  type="submit">Edit</button>
+
+
+                    </form>
+                </td>
             </tr>
 
 
@@ -48,5 +57,6 @@
 
 
 
+@include('layouts/footer')
 
 @endsection

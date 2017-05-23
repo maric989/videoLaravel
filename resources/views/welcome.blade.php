@@ -37,7 +37,7 @@
                 </li>
             </ul>
             <span class="navbar-text">
-      Navbar text with an inline element
+      Internet movie database
     </span>
         </div>
     </nav>

@@ -42,7 +42,7 @@ Route::get('/category/show', 'CategoryController@index');
 
 Route::post('/category/delete/{id}', 'CategoryController@delete');
 
-Route::get('/category/{id}/edit', 'CategoryController@edit');
+Route::post('/category/{id}/edit', 'CategoryController@edit');
 
 Route::put('/category/{id}', 'CategoryController@update');
 
@@ -58,5 +58,13 @@ Route::get('/movie/show/{id}', 'MovieController@show');
 
 Route::post('/movie/delete/{id}','MovieController@delete');
 
+Route::post('/movie/{id}/edit','MovieController@edit');
+
+Route::put('/movie/{id}','MovieController@update');
 
 
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

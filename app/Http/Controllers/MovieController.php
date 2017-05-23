@@ -91,19 +91,20 @@ class MovieController extends Controller
 
     public function edit($id)
     {
-        //
+        $movies = Movie::find($id);
+
+        return view('movie.edit', ['movies'=> $movies]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, $id)
     {
-        //
+        $movies = Movie::find($id);
+
+        $movies->name = $request->input('name');
+        $movies->save();
+
+        return redirect('movie/index');
     }
 
     /**

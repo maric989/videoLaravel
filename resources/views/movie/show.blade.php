@@ -42,5 +42,11 @@
 
 <a href="../index"> Back to actors</a>
 
+
+
+
+
+@include('layouts/footer')
 </body>
 </html>
+

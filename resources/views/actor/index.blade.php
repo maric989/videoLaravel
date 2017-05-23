@@ -71,5 +71,6 @@
 
 
 
+    @include('layouts/footer')
 
 @endsection
