@@ -20,10 +20,7 @@
             <input type="file" name="video">
 
         </div>
-        {{--<div class="form-group">
-            <label for="title">Movie name:</label>
-            <input type="text" class="form-control" id="name" name="name">
-        </div>--}}
+
         <div>
             @foreach($categories as $category)
 

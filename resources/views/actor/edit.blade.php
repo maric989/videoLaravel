@@ -33,23 +33,3 @@
 
 <a href="../show"> Back to actors</a>
 
-{{--
-<h1>Edit {{ $actor->fname }}</h1>
-
-<!-- if there are creation errors, they will show here -->
-
-
-{{ Form::model($actor, array('route' => array('actor.update', $actor->id), 'method' => 'PUT')) }}
-
-<div class="form-group">
-    {{ Form::label('name', 'Name') }}
-    {{ Form::text('name', null, array('class' => 'form-control')) }}
-</div>
-
-<div class="form-group">
-    {{ Form::label('email', 'Email') }}
-    {{ Form::email('email', null, array('class' => 'form-control')) }}
-</div>
-{{ Form::submit('Edit the Nerd!', array('class' => 'btn btn-primary')) }}
-
-{{ Form::close() }}--}}

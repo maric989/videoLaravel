@@ -54,7 +54,7 @@
 <div class="album text-muted">
     <div class="container">
 
-        <div class="row">
+        <div class="thumbnail">
             @foreach($movies as $movie)
             <div class="card">
                 <h3>{{$movie->name}}</h3>
